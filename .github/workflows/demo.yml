@@ -30,7 +30,7 @@ jobs:
         with:
          name: artifact-files
          path: |
-          artfolder
+          src
           package.json
   deploy:
     needs: build
