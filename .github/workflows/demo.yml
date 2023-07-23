@@ -30,8 +30,8 @@ jobs:
         with:
          name: artifact-files
          path: |
-         artfolder
-         package.json
+          artfolder
+          package.json
   deploy:
     needs: build
     runs-on: ubuntu-latest
