@@ -38,7 +38,9 @@ jobs:
     steps:
       - name: Get Articats Build
         uses: actions/download-artifacts@v3
-        with: artifact-files
-         name: 
+        with: 
+         name: artifact-files 
+      - name: Output Artifact
+        run: ls
       - name: Deploy
         run: echo "Deploying..."
