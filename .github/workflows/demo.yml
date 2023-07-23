@@ -30,11 +30,15 @@ jobs:
         with:
          name: artifact-files
          path: |
-          artfolder
+          src
           package.json
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Get Articats Build
+        uses: actions/download-artifacts@v3
+        with: artifact-files
+         name: 
       - name: Deploy
         run: echo "Deploying..."
