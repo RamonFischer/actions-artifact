@@ -30,11 +30,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Get Articats Build
-        uses: actions/download-artifact@v3
-        with: 
-         name: artifact-files 
-      - name: Output Artifact
-        run: ls
+     
       - name: Deploy
         run: echo "Deploying..."
