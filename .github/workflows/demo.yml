@@ -37,6 +37,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-     
+      - name: Deploy Artifact
+        uses: actions/download-artifact@v3
+        with:
+         name: drop
       - name: Deploy
         run: echo "Deploying..."
