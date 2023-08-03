@@ -35,9 +35,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: drop
-          path: |
-           src
-           package.json
+          path: dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
