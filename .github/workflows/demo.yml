@@ -42,9 +42,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy Artifact
+      - name: Get build Artifact
         uses: actions/download-artifact@v3
         with:
          name: drop
+      - name: Output filename
+        run: echo "${{ needs.build.outputs.outputs-file }}"
       - name: Deploy
         run: echo "Deploying..."
